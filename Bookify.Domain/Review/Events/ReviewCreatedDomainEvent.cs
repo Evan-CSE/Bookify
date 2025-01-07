@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Bookify.Domain.Abstraction;
 
-namespace Bookify.Domain.Bookings.Events
+namespace Bookify.Domain.Review.Events
 {
-    public record IBookingReservedEvent(Guid id) : IDomainEvent
+    public sealed record ReviewCreatedDomainEvent(Guid id) : IDomainEvent
     {
     }
 }

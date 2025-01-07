@@ -2,7 +2,7 @@
 
 namespace Bookify.Domain.Bookings.Events
 {
-    public record IBookingRejectedEvent(DateTime utcNow) : IDomainEvent
+    public sealed record BookingCompletedDomainEvent(Guid Id) : IDomainEvent
     {
     }
 }

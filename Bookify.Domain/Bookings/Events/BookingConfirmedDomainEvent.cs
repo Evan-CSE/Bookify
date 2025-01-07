@@ -2,7 +2,7 @@
 
 namespace Bookify.Domain.Bookings.Events
 {
-    public record IBookingCompletedEvent(DateTime utcNow) : IDomainEvent
+    public record BookingConfirmedDomainEvent(Guid Id) : IDomainEvent
     {
     }
 }
