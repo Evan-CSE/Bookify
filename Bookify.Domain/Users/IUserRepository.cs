@@ -4,6 +4,6 @@
     {
         Task<User?> GetByIdAsync(Guid guid, CancellationToken cancellation = default);
 
-        void Add(User user);
+        Task<User> Add(User user);
     }
 }

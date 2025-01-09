@@ -1,4 +1,5 @@
 ﻿using Bookify.Domain.Abstraction;
+using Bookify.Domain.Abstractions;
 using Bookify.Domain.Apartments;
 using Bookify.Domain.Bookings.Events;
 using Bookify.Domain.Shared;
@@ -61,9 +62,11 @@ namespace Bookify.Domain.Bookings
             Guid userId,
             DateRange duration,
             DateTime utcNow,
-            PricingDetails pricingDetails
+            PricingService pricingService
         )
         {
+            PricingDetails pricingDetails = pricingService.CalculatePrice(apartment, duration);
+
             Booking booking = new(
                 Guid.NewGuid(),
                 apartment.Id,

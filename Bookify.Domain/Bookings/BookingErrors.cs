@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Bookify.Domain.Abstraction;
+﻿using Bookify.Domain.Abstractions;
 
 namespace Bookify.Domain.Bookings
 {
@@ -28,5 +23,10 @@ namespace Bookify.Domain.Bookings
         public static Error AlreadyStarted = new(
             "Booking.AlreadyStarted",
             "The booking has already started");
+
+        public static Error NotAuthorized = new(
+            "Booking.NotAuthorized",
+            "User is not authorized to cancel the booking"
+        );
     }
 }

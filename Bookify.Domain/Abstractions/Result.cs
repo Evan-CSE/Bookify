@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics.CodeAnalysis;
-using Bookify.Domain.Abstraction;
+using Bookify.Domain.Abstractions;
 
-namespace Bookify.Domain.Abstraction
+namespace Bookify.Domain.Abstractions
 {
     public class Result
     {
@@ -23,7 +23,7 @@ namespace Bookify.Domain.Abstraction
             Error = error;
         }
 
-        public static Result Success() => new Result(true, Error.None);
+        public static Result Success() => new(true, Error.None);
 
         public static Result Failure(Error error) => new Result(false, error);
 
@@ -44,6 +44,6 @@ public class Result<TValue> : Result
 
     [NotNull]
     public TValue Value => IsSuccessful
-        ? _value 
+        ? _value
         : throw new InvalidOperationException("Failed value cannot be read");
 }

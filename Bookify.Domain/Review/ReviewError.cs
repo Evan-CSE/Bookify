@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Bookify.Domain.Abstraction;
+using Bookify.Domain.Abstractions;
 
 namespace Bookify.Domain.Review
 {

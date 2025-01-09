@@ -2,7 +2,5 @@
 
 namespace Bookify.Domain.Users.Events
 {
-    public record UserCreatedDomainEvent (Guid id) : IDomainEvent
-    {
-    }
+    public record UserCreatedDomainEvent (Guid id) : IDomainEvent;
 }
